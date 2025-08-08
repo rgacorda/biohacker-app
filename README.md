@@ -1,50 +1,155 @@
-# Welcome to your Expo app 👋
+# 🧠 Biohacker App — MVP
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An all-in-one platform to help you optimize your health through **personalized advice**, **smart tracking**, **AI coaching**, and **community support**.  
+Designed for anyone who wants to take control of their **physical, mental, and emotional well-being**—whether you’re a seasoned biohacker or just getting started.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Overview
 
-   ```bash
-   npm install
-   ```
+**Core Features:**
+- **Daily Check-Ins** — Quickly log mood, energy, sleep, and brain fog
+- **Personalized Task List** — Daily habits tailored to your goals
+- **AI Health Coach** — Smart, science-backed recommendations
+- **Supplement Tracker** — Log, track, and get reminders for your supplements
+- **Learning Center** — Digestible science-backed health insights
+- **Community Forum** — Engage with others, optionally get feedback from health professionals
 
-2. Start the app
+**Target Users:**
+- Anyone curious about improving their health
+- No tech experience required — friendly, modern interface
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 📱 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Tool | Purpose |
+|------|---------|
+| **React Native (Expo)** | Cross-platform app (iOS + Android) |
+| **TypeScript** | Type safety & maintainable code |
+| **Supabase** | Auth, database, and storage |
+| **AsyncStorage** | Local caching |
+| **nativewind (Tailwind CSS)** | Fast, responsive styling |
+| **React Navigation** | Navigation |
+| **Zustand** | Lightweight global state management |
+| **Lucide Icons** | Clean, consistent icon set |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 📂 Folder Structure
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+/src
+  /components
+    Button.tsx
+    Card.tsx
+    Input.tsx
+    CheckInSlider.tsx
+  /screens
+    OnboardingScreen.tsx
+    CheckInScreen.tsx
+    DashboardScreen.tsx
+    TasksScreen.tsx
+    SupplementsScreen.tsx
+    LearningCenterScreen.tsx
+    CommunityScreen.tsx
+  /navigation
+    AppNavigator.tsx
+  /store
+    useUserStore.ts
+    useTasksStore.ts
+  /utils
+    supabaseClient.ts
+    colors.ts
+    formatDate.ts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🗓 MVP Development Timeline (7 Days)
 
-To learn more about developing your project with Expo, look at the following resources:
+| Day | Tasks |
+|-----|-------|
+| **Day 1-2** | Setup project, auth flow, navigation, folder structure |
+| **Day 3-4** | Build Check-In screen + Dashboard UI |
+| **Day 5** | Implement Task List + Supplements tracker |
+| **Day 6** | Add Learning Center + Community screens |
+| **Day 7** | Polish UI, add reminders/notifications, testing |
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🎨 UI Design Guidelines
 
-Join our community of developers creating universal apps.
+**Typography**
+- Headings: Bold, 24–28px
+- Body: 14–16px, medium weight
+- Font: `Inter` or `Nunito`
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Colors**
+- Primary: `#4CAF93` (calming green)
+- Secondary: `#4A90E2` (soft blue)
+- Background: `#F9FAFB`
+- Text primary: `#1F2937` (dark gray)
+- Text secondary: `#6B7280` (cool gray)
+
+**Component Style**
+- Cards: `rounded-2xl` + `shadow-md`
+- Buttons: `rounded-full` for CTAs
+- Consistent iconography
+
+---
+
+## 🔑 Setup Instructions
+
+### 1. Clone the Repo
+```bash
+git clone https://github.com/yourusername/biohacker-app.git
+cd biohacker-app
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the App
+```bash
+npx expo start
+```
+
+### 4. Environment Variables
+Create a `.env` file:
+```
+EXPO_PUBLIC_SUPABASE_URL=your_supabase_url
+EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
+```
+
+---
+
+## 📌 Notes for Developers
+
+- Keep **components small and reusable**.
+- All styles must use `nativewind` classes for consistency.
+- Use **Zustand** for global state, not Context API (faster and simpler).
+- When building features that require AI, start with **mock responses** so UI/UX can be tested before AI integration.
+- Write commit messages in the format:
+```
+[feature] short description
+[fix] short description
+[chore] short description
+```
+
+---
+
+## 🛠 Future Enhancements
+
+- Wearable device integrations (Apple Health, Fitbit, Oura)
+- Advanced AI coaching
+- Deeper analytics dashboard
+- Subscription tiers with premium features
+
+---
+
+**Made with 💚 for the curious mind & healthy body.**
